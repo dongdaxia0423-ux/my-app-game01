@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兵將王傳奇 | Legend of Kings</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #1a1a1a; /* 根據原始碼設定的背景色 */
+            --panel-bg: #2b1b17; /* 根據原始碼設定的側邊欄色 */
+            --carbon: #111;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            font-family: "Microsoft JhengHei", serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* 碳纖維質感 */
+        }
+
+        .header {
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
+            background: linear-gradient(to bottom, #2b1b17, #1a1a1a);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            color: var(--gold);
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            letter-spacing: 5px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px 20px;
+            background: rgba(43, 27, 23, 0.9);
+            padding: 30px;
+            border: 1px solid var(--gold);
+            border-radius: 4px;
+            position: relative;
+        }
+
+        /* 裝飾性邊角 */
+        .container::before {
+            content: "⚔️";
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background: var(--dark-bg);
+            border: 1px solid var(--gold);
+            padding: 5px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            background: #000;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed var(--gold);
+            color: var(--gold);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .stat-card h3 {
+            margin: 0 0 10px 0;
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: var(--gold);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .download-btn:hover {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #888;
+            text-align: center;
+        }
+
+        .badge {
+            border: 1px solid #555;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>兵將王傳奇</h1>
+        <p style="color: #aaa; letter-spacing: 2px;">LEGEND OF KINGS AND GENERALS</p>
+    </div>
+
+    <div class="container">
+        <div class="hero-image">
+            <p>[ 戰場區域：打敗敵方國王，並保護己方國王 ]</p>
+        </div>
+
+        <h2>⚔️ 戰局簡介</h2>
+        <p>這是一款結合了高難度 AI 邏輯與行動點數管理的戰術模擬遊戲。在 22x22 的廣大戰場上，您必須調遣兵卒、策劃進攻，並在多變的地形中尋找生機。</p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>📜 核心機制</h3>
+                <p>每回合 18 點行動點數 (AP)<br>第 7 回合國王解鎖行動</p>
+            </div>
+            <div class="stat-card">
+                <h3>🌲 多樣地形</h3>
+                <p>河流、森林、高山、橋樑<br>以及充滿危險的叛軍營地</p>
+            </div>
+            <div class="stat-card">
+                <h3>🛡️ 晉升系統</h3>
+                <p>兵卒擊殺敵人可晉升為將軍<br>獲得短暫無敵與統帥靈氣</p>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://github.com/您的帳號/您的倉庫/releases" class="download-btn">立即下載 .EXE 執行檔</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>開發團隊：Aresir (主作者) & Dongdaxia, Gemini</p>
+        <p>本專案採用 Apache License 2.0 協議授權</p>
+        <p>© 2026 Aresir Software Quality Control Studio</p>
+    </div>
+
+</body>
+</html>
